@@ -15,7 +15,7 @@ if(menucheck.checked){
 
 const elements = document.querySelector("#typing-animation")
   
-const words = "Olá, Seja muito Bem vindo(a) ao meu portifólio, meu nome é Denis Ferreira, e essa página é um Overview da minha tragetória como Desenvolvedor Full Stack."
+const words = "Olá, Seja muito Bem vindo(a) ao meu portfólio, meu nome é Denis Ferreira, e essa página é um Overview da minha tragetória como Desenvolvedor Full Stack."
 
 function showtext(elements,text) {
     const contact = document.getElementsByClassName("contact")[0]
