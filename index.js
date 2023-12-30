@@ -1,5 +1,70 @@
+document.addEventListener('DOMContentLoaded',()=>{
+
+    const elements = document.querySelector("#typing-animation")
+    const words = "Olá, Seja muito Bem vindo(a) ao meu portfólio, meu nome é Denis Ferreira, e essa página é um Overview da minha tragetória como Desenvolvedor Full Stack."
+    const downButton = document.getElementById('downimg')
+    const upButton = document.getElementById('upimg')
+    const homepage = document.getElementById('homepage')
+    const biocontainer = document.getElementById('biocontainer')
+
+
+    function showtext(elements,text) {
+        const contact = document.getElementsByClassName("contact")[0]
+        
+        const char = words.split("").reverse();
+    
+        const typer = setInterval(()=>{               
+    
+            if(!char.length){
+            contact.style.opacity = 1
+            return clearInterval(typer) 
+            
+            }
+                     
+            const next = char.pop()
+    
+            elements.innerHTML += next                 
+    
+        },62)
+    
+    
+     } 
+    
+    
+     setTimeout(()=>{
+     showtext(elements,words)
+    },1000)
+   
+
+    downButton.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+        biocontainer.scrollIntoView({behavior:'smooth'});
+        
+      
+    })
+
+    upButton.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+       homepage.scrollIntoView({behavior:'smooth'});
+        
+      
+    })
+
+
+})
+
+
+const gotoproject = document.querySelectorAll('.gotoprojects')
+const project1 = document.getElementById('project1')
+const gotoabout = document.querySelectorAll('.gotoabout')
+const gotocontact = document.querySelectorAll('.gotocontact')
+const contact_me = document.getElementById('contact-me')
 const respemenu = document.querySelector('.respmenuopen')
 const menucheck = document.getElementById('respmenu-hamburger')
+const linkdinicon = document.querySelectorAll('.contactlinkdin')
+const githubcontact = document.querySelectorAll('.contactgithub')
 
 function openrespmenu(){
    
@@ -13,39 +78,6 @@ if(menucheck.checked){
 }
 
 
-const elements = document.querySelector("#typing-animation")
-  
-const words = "Olá, Seja muito Bem vindo(a) ao meu portfólio, meu nome é Denis Ferreira, e essa página é um Overview da minha tragetória como Desenvolvedor Full Stack."
-
-function showtext(elements,text) {
-    const contact = document.getElementsByClassName("contact")[0]
-    
-    const char = words.split("").reverse();
-
-    const typer = setInterval(()=>{               
-
-        if(!char.length){
-        contact.style.opacity = 1
-        return clearInterval(typer) 
-        
-        }
-                 
-        const next = char.pop()
-
-        elements.innerHTML += next                 
-
-    },62)
-
-
- } 
-
-
- setTimeout(()=>{
- showtext(elements,words)
-},1000)
-
-const linkdinicon = document.querySelectorAll('.contactlinkdin')
-const githubcontact = document.querySelectorAll('.contactgithub')
 linkdinicon.forEach(element=>{
     element.addEventListener('click',()=>{
 
@@ -67,38 +99,7 @@ githubcontact.forEach(element=>{
 
 
 
-
-
-document.addEventListener('DOMContentLoaded',()=>{
-
-    const downButton = document.getElementById('downimg')
-    const upButton = document.getElementById('upimg')
-    const homepage = document.getElementById('homepage')
-    const biocontainer = document.getElementById('biocontainer')
-    const gotoproject = document.querySelectorAll('.gotoprojects')
-    const project1 = document.getElementById('project1')
-    const gotoabout = document.querySelectorAll('.gotoabout')
-    const gotocontact = document.querySelectorAll('.gotocontact')
-    const contact_me = document.getElementById('contact-me')
-   
-
-    downButton.addEventListener('click',(e)=>{
-        e.preventDefault()
-
-        biocontainer.scrollIntoView({behavior:'smooth'});
-        
-      
-    })
-
-    upButton.addEventListener('click',(e)=>{
-        e.preventDefault()
-
-       homepage.scrollIntoView({behavior:'smooth'});
-        
-      
-    })
-
-    gotoproject.forEach(element =>{
+gotoproject.forEach(element =>{
 
     element.addEventListener('click',(e)=>{
         e.preventDefault()
@@ -136,29 +137,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     })
 
 
-    const pages = document.querySelectorAll('.page');
-
-    pages.forEach((page, index) => {
-
-    page.addEventListener('wheel', (event) => {
-        event.preventDefault()
-        const delta = event.deltaY
-        
-    
-        if (delta > 0 && index < pages.length - 1) {
-        pages[index +1].scrollIntoView({ behavior: 'smooth' });
-       
-        } else if (delta < 0 && index > 0) {
-        pages[index -1].scrollIntoView({ behavior: 'smooth' });
-      
-        }
-    })      
-   
-    })
-
-
-})
-
 const carousels = document.querySelectorAll('.carousel');
 const EventListCarousel = document.querySelectorAll('.carousel.EventList')
 const E_CommerceBooks = document.querySelectorAll('.carousel.E-CommerceBooks')
@@ -166,6 +144,25 @@ const prevBtns = document.querySelectorAll('.prevBtn');
 const nextBtns = document.querySelectorAll('.nextBtn');
 const prevBtnsBlack = document.querySelectorAll('.prevBtn.Black');
 const nextBtnsBlack = document.querySelectorAll('.nextBtn.Black');
+const pages = document.querySelectorAll('.page');
+
+pages.forEach((page, index) => {
+
+page.addEventListener('wheel', (event) => {
+    event.preventDefault()
+    const delta = event.deltaY
+    
+
+    if (delta > 0 && index < pages.length - 1) {
+    pages[index +1].scrollIntoView({ behavior: 'smooth' });
+   
+    } else if (delta < 0 && index > 0) {
+    pages[index -1].scrollIntoView({ behavior: 'smooth' });
+  
+    }
+})      
+
+})
 
 
 carousels.forEach((carousel, index) => {
@@ -209,7 +206,6 @@ E_CommerceBooks.forEach((carousel)=>{
     }
     carousel.innerHTML = string
 })
-
 
 
 
