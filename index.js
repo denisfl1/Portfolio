@@ -92,7 +92,7 @@ githubcontact.forEach(element=>{
 
     element.addEventListener('click',()=>{
 
-    window.location.href = 'https://github.com/denisfl1?tab=repositories'   
+    window.location.href = 'https://github.com/denisfl1'   
 })
 
 })
