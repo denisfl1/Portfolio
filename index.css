@@ -916,6 +916,8 @@ left: 10px;
             display: flex;
             flex-wrap: wrap;
             width: 168px;
+            justify-content: center;
+            
         }
     
 
