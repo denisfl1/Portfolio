@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     const upButton = document.getElementById('upimg')
     const homepage = document.getElementById('homepage')
     const biocontainer = document.getElementById('biocontainer')
+    const footer = document.getElementsByClassName("footer page")[0]
+    const GetDate = new Date();
+    const Year_Formated = GetDate.toLocaleDateString('pt-BR', { year: 'numeric' })
+    footer.children[0].textContent = `© ${Year_Formated} Denis Ferreira. Todos os direitos reservados`
 
 
     function showtext(elements,text) {
@@ -331,6 +335,8 @@ function Btns_SlideResp_src_Window_Width() {
   
 }
 
+
 window.addEventListener('resize', Btns_SlideResp_src_Window_Width)
 
 Btns_SlideResp_src_Window_Width()
+
