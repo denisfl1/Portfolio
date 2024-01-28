@@ -170,7 +170,7 @@ section{
 
 
 .perfilcontainer img{
-    display: block;
+    display: flex;
     text-align: center;
     opacity: 0; 
     transform: translateY(-50%); 
