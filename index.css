@@ -161,6 +161,10 @@ section{
 .perfil{
     border-radius: 50%;
     height: 100%;
+    display: flex;
+    opacity: 0; 
+    transform: translateY(-50%); 
+    animation: slideIn 2s forwards;
 }
 
 .perfilcontainer{
@@ -170,13 +174,6 @@ section{
 }
 
 
-.perfilcontainer img{
-    display: flex;
-    opacity: 0; 
-    transform: translateY(-50%); 
-    animation: slideIn 2s forwards;
- 
-}
 
 @keyframes slideIn{
 to{
@@ -1147,11 +1144,12 @@ left: 10px;
         display: none;
     }
 
-    .perfilcontainerresp img{
-        text-align: center;
+    .perfilresp{
         opacity: 0; 
         transform: translateY(-50%); 
         animation: slideIn 2s forwards;
+        height: 100%;
+        margin:auto
     }
 
  
