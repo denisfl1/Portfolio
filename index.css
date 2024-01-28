@@ -160,6 +160,7 @@ section{
 
 .perfil{
     border-radius: 50%;
+    height: 100%;
 }
 
 .perfilcontainer{
@@ -171,11 +172,10 @@ section{
 
 .perfilcontainer img{
     display: flex;
-    text-align: center;
     opacity: 0; 
     transform: translateY(-50%); 
     animation: slideIn 2s forwards;
-    height: 100%;
+ 
 }
 
 @keyframes slideIn{
