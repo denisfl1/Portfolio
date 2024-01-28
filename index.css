@@ -172,8 +172,8 @@ section{
 .perfilcontainer img{
     display: block;
     text-align: center;
-    opacity: 0; /* Define a opacidade inicial como 0 */
-    transform: translateY(-50%); /* Move a imagem para cima 100% da sua altura */
+    opacity: 0; 
+    transform: translateY(-50%); 
     animation: slideIn 2s forwards;
 }
 
