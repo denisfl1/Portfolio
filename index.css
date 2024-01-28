@@ -175,6 +175,7 @@ section{
     opacity: 0; 
     transform: translateY(-50%); 
     animation: slideIn 2s forwards;
+    height: 100%;
 }
 
 @keyframes slideIn{
