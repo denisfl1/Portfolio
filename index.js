@@ -144,6 +144,7 @@ gotoproject.forEach(element =>{
 const carousels = document.querySelectorAll('.carousel');
 const EventListCarousel = document.querySelectorAll('.carousel.EventList')
 const E_CommerceBooks = document.querySelectorAll('.carousel.E-CommerceBooks')
+const Medical_Scheduling_System = document.querySelectorAll('.carousel.Medical_Scheduling_System')
 const prevBtns = document.querySelectorAll('.prevBtn');
 const nextBtns = document.querySelectorAll('.nextBtn');
 const prevBtnsBlack = document.querySelectorAll('.prevBtn.Black');
@@ -211,7 +212,16 @@ E_CommerceBooks.forEach((carousel)=>{
     carousel.innerHTML = string
 })
 
+Medical_Scheduling_System.forEach((carousel)=>{
 
+    let string = "";
+    for(i=1;i<40;i++){
+        string +=  `<div class="slide"><img src="./projectsimgs/Medical__scheduling_system/Captura de Tela (${i}).png" alt= Slide ${i}></div>`
+    }
+    carousel.innerHTML = string
+
+
+})
 
 let expand = false
 const SlideDiv = document.querySelectorAll('.slide')
