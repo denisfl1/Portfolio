@@ -273,7 +273,13 @@ margin-left:30px ;
     margin: auto;
 }
 
-
+.ruby{
+    border-top-left-radius: 66%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.23); 
+}
 
 
 .divdasimgs p{
