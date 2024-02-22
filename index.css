@@ -17,6 +17,10 @@ header{
 
 }
 
+.border{
+    box-shadow:  0px 0px 10px 0px #d2d2d278;
+    border-radius: 5px;
+}
 
 .headername{
     display: flex;
