@@ -506,6 +506,11 @@ left: 10px;
 }
 
 
+.project3 h1{
+font-size: 45px
+}
+
+
 .project4{
     min-width: 100%;
     min-height: 100vh;
@@ -1161,6 +1166,11 @@ left: 10px;
 
     .contactcontainer{
         height: 100vh;
+     }
+
+
+    .project3.page h1{
+        font-size: 28px;
      }
 
 }
