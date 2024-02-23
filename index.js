@@ -176,9 +176,40 @@ page.addEventListener('wheel', (event) => {
 
 })
 
-const page5Width = window.innerWidth <= 430 ? 'touchstart' : 'mouseover'
 
 page5.addEventListener('mouseover',()=>{
+
+    const loading = setInterval(()=>{
+        loadingCount +=1
+
+        if(page5.children[0].style.opacity == 1){
+            page5.children[0].style.opacity = 0
+        }else{
+        
+            if(loadingCount != 5){
+            page5.children[0].style.opacity = 1
+            }else{
+                page5.children[0].style.opacity = 0
+            }
+        
+        }
+        
+        if(loadingCount == 5){
+            clearInterval(loading)
+            page5.children[0].style.opacity = 0
+            page5.children[0].style.display = 'none'   
+            page5.children[1].style.display = 'block'
+        
+        }
+            
+        
+    },800)
+
+
+})
+
+
+page5.addEventListener('touchmove',()=>{
 
     const loading = setInterval(()=>{
         loadingCount +=1
@@ -383,39 +414,6 @@ function Btns_SlideResp_src_Window_Width() {
 
     })
 
-
-    const page5Width = window.innerWidth <= 430 ? 'touchmove' : 'mouseover'
-
-    page5.addEventListener(page5Width,()=>{
-
-    const loading = setInterval(()=>{
-        loadingCount +=1
-
-        if(page5.children[0].style.opacity == 1){
-            page5.children[0].style.opacity = 0
-        }else{
-        
-            if(loadingCount != 5){
-            page5.children[0].style.opacity = 1
-            }else{
-                page5.children[0].style.opacity = 0
-            }
-        
-        }
-        
-        if(loadingCount == 5){
-            clearInterval(loading)
-            page5.children[0].style.opacity = 0
-            page5.children[0].style.display = 'none'   
-            page5.children[1].style.display = 'block'
-        
-        }
-            
-        
-    },800)
-
-
-})
   
 }
 
