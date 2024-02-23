@@ -378,7 +378,8 @@ footer span{
     text-align: justify;
     padding: 30px;
     box-sizing: content-box;
-    border: 1px solid rgb(231, 237, 246);
+    /* border: 1px solid rgb(231, 237, 246); */
+    border: 1px solid rgb(231, 231, 231);
     border-radius: 8px;
   }
 

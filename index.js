@@ -70,6 +70,8 @@ const menucheck = document.getElementById('respmenu-hamburger')
 const linkdinicon = document.querySelectorAll('.contactlinkdin')
 const githubcontact = document.querySelectorAll('.contactgithub')
 
+
+
 function openrespmenu(){
    
 if(menucheck.checked){
@@ -150,13 +152,16 @@ const nextBtns = document.querySelectorAll('.nextBtn');
 const prevBtnsBlack = document.querySelectorAll('.prevBtn.Black');
 const nextBtnsBlack = document.querySelectorAll('.nextBtn.Black');
 const pages = document.querySelectorAll('.page');
+const page5  = document.getElementsByClassName('project3')[0]
+let  loadingCount = 0
+
 
 pages.forEach((page, index) => {
 
 page.addEventListener('wheel', (event) => {
     event.preventDefault()
     const delta = event.deltaY
-    
+    console.log(page,index)
 
     if (delta > 0 && index < pages.length - 1) {
     pages[index +1].scrollIntoView({ behavior: 'smooth' });
@@ -165,9 +170,44 @@ page.addEventListener('wheel', (event) => {
     pages[index -1].scrollIntoView({ behavior: 'smooth' });
   
     }
+
 })      
 
+
 })
+
+
+page5.addEventListener('mouseover',()=>{
+
+    const loading = setInterval(()=>{
+        loadingCount +=1
+
+        if(page5.children[0].style.opacity == 1){
+            page5.children[0].style.opacity = 0
+        }else{
+        
+            if(loadingCount != 5){
+            page5.children[0].style.opacity = 1
+            }else{
+                page5.children[0].style.opacity = 0
+            }
+        
+        }
+        
+        if(loadingCount == 5){
+            clearInterval(loading)
+            page5.children[0].style.opacity = 0
+            page5.children[0].style.display = 'none'   
+            page5.children[1].style.display = 'block'
+        
+        }
+            
+        
+    },800)
+
+
+})
+
 
 
 carousels.forEach((carousel, index) => {
