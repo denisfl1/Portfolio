@@ -384,7 +384,7 @@ function Btns_SlideResp_src_Window_Width() {
     })
 
 
-    const page5Width = window.innerWidth <= 430 ? 'touchstart' : 'mouseover'
+    const page5Width = window.innerWidth <= 430 ? 'touchmove' : 'mouseover'
 
     page5.addEventListener(page5Width,()=>{
 
