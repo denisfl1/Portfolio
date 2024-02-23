@@ -209,7 +209,7 @@ page5.addEventListener('mouseover',()=>{
 })
 
 
-page5.addEventListener('touchmove',()=>{
+page5.addEventListener('touchstart',()=>{
 
     const loading = setInterval(()=>{
         loadingCount +=1
