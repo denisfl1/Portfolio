@@ -209,6 +209,38 @@ page5.addEventListener('mouseover',()=>{
 })
 
 
+page5.addEventListener('touchmove',()=>{
+
+    const loading = setInterval(()=>{
+        loadingCount +=1
+
+        if(page5.children[0].style.opacity == 1){
+            page5.children[0].style.opacity = 0
+        }else{
+        
+            if(loadingCount != 5){
+            page5.children[0].style.opacity = 1
+            }else{
+                page5.children[0].style.opacity = 0
+            }
+        
+        }
+        
+        if(loadingCount == 5){
+            clearInterval(loading)
+            page5.children[0].style.opacity = 0
+            page5.children[0].style.display = 'none'   
+            page5.children[1].style.display = 'block'
+        
+        }
+            
+        
+    },800)
+
+
+})
+
+
 
 carousels.forEach((carousel, index) => {
 let currentIndex = 0
