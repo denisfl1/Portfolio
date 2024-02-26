@@ -522,13 +522,6 @@ font-size: 45px
     animation: aparecer-voltar 2s ease-in-out infinite; 
   } 
 
-.project4{
-    min-width: 100%;
-    min-height: 100vh;
-    background-color: rgb(73, 42, 165);
-}
-
-
 
 
 .carousel-cont{
