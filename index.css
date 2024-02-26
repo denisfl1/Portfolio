@@ -17,6 +17,7 @@ header{
 
 }
 
+
 .border{
     box-shadow:  0px 0px 10px 0px #d2d2d278;
     border-radius: 5px;
@@ -510,6 +511,16 @@ left: 10px;
 font-size: 45px
 }
 
+@keyframes aparecer-voltar {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+
+  .project3 h1{
+    animation: aparecer-voltar 2s ease-in-out infinite; 
+  } 
 
 .project4{
     min-width: 100%;

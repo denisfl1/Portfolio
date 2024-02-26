@@ -181,16 +181,6 @@ page5.addEventListener('mouseover',()=>{
 
     const loading = setInterval(()=>{
         loadingCount +=1
-
-        if(page5.children[0].style.opacity == 1){
-            page5.children[0].style.opacity = 0
-        }else{
-        
-            if(loadingCount < 5){
-            page5.children[0].style.opacity = 1
-            }
-        
-        }
         
         if(loadingCount == 5){
             clearInterval(loading)
@@ -210,17 +200,7 @@ page5.addEventListener('mouseover',()=>{
 page5.addEventListener('touchstart',()=>{
 
     const loading = setInterval(()=>{
-        loadingCount +=1
-
-        if(page5.children[0].style.opacity == 1){
-            page5.children[0].style.opacity = 0
-        }else{
-        
-            if(loadingCount < 5){
-            page5.children[0].style.opacity = 1
-            }
-        
-        }
+        loadingCount +=1  
         
         if(loadingCount == 5){
             clearInterval(loading)
