@@ -186,10 +186,8 @@ page5.addEventListener('mouseover',()=>{
             page5.children[0].style.opacity = 0
         }else{
         
-            if(loadingCount != 5){
+            if(loadingCount < 5){
             page5.children[0].style.opacity = 1
-            }else{
-                page5.children[0].style.opacity = 0
             }
         
         }
@@ -218,10 +216,8 @@ page5.addEventListener('touchstart',()=>{
             page5.children[0].style.opacity = 0
         }else{
         
-            if(loadingCount != 5){
+            if(loadingCount < 5){
             page5.children[0].style.opacity = 1
-            }else{
-                page5.children[0].style.opacity = 0
             }
         
         }
