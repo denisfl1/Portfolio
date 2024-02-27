@@ -161,7 +161,6 @@ pages.forEach((page, index) => {
 page.addEventListener('wheel', (event) => {
     event.preventDefault()
     const delta = event.deltaY
-    console.log(page,index)
 
     if (delta > 0 && index < pages.length - 1) {
     pages[index +1].scrollIntoView({ behavior: 'smooth' });
@@ -279,6 +278,7 @@ const CloseSlide = document.querySelectorAll('.shrink')
 const CarouselsRes = document.querySelectorAll('.carousel-cont')
 const CarouselsResMobile = document.querySelectorAll('.carousel1-cont')
 const ExpandSlideIcon = document.querySelectorAll('.expand')
+const containerform = document.getElementsByClassName('containerform')[0]
 
 
 CarouselsRes.forEach((element,index)=>{
@@ -392,6 +392,29 @@ function Btns_SlideResp_src_Window_Width() {
 
   
 }
+
+containerform.children[0].children[8].addEventListener('click',(e)=>{
+
+    const childrenInput  = containerform.children[0]
+    let verify = false
+    for (let i = 0; i < childrenInput.length; i++) {
+        const child = childrenInput[i]
+     
+        if (child.tagName.toLowerCase() === 'input' || child.tagName.toLowerCase() === 'textarea') {
+          
+            if (!child.value.trim() && !child.required){
+                verify = true   
+            }
+        
+        }
+
+        if(child.tagName.toLowerCase() === 'button' && verify){
+            e.preventDefault()
+        } 
+
+    }
+
+})
 
 
 window.addEventListener('resize', Btns_SlideResp_src_Window_Width)
