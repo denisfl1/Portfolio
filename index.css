@@ -379,8 +379,7 @@ footer span{
     text-align: justify;
     padding: 30px;
     box-sizing: content-box;
-    /* border: 1px solid rgb(231, 237, 246); */
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(231, 237, 246);
     border-radius: 8px;
   }
 
@@ -1174,7 +1173,7 @@ font-size: 45px
 
 
     .project3.page h1{
-        font-size: 30px;
+        font-size: 35px;
      }
 
 }

@@ -409,6 +409,7 @@ containerform.children[0].children[8].addEventListener('click',(e)=>{
         }
 
         if(child.tagName.toLowerCase() === 'button' && verify){
+
             e.preventDefault()
         } 
 
