@@ -113,6 +113,9 @@ section{
    
 }
 
+#typing-animation{
+z-index: 1;
+}
 
 .apresentation{
     max-width: 430px;
@@ -170,6 +173,7 @@ section{
     opacity: 0; 
     transform: translateY(-50%); 
     animation: slideIn 2s forwards;
+    z-index: 1;
 }
 
 .perfilcontainer{
@@ -219,7 +223,7 @@ animation: slideIn 2s forwards, floating 2s ease-in-out 2s infinite
     flex-direction: column;
     display: flex;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     flex-wrap: wrap;
 }
 
@@ -436,27 +440,28 @@ footer span{
 
 .iconsproject1{
     display: flex;
-    /* width: 170px; */
-    margin-top: 45px;
     position: relative;
-
-    text-align: center;
-    left: 0;
-    margin-left: 30px;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 35px;
   
 }
 
 
 .iconsproject1 h2{
-position: absolute;
-top: -55%;
-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+.containerGitIcon{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .project1techs{
-    width: 80px;
     text-align: center;
-      
+    margin-right: 10px;  
 }
 .project1techs p{
     margin-top: 0;
@@ -481,11 +486,6 @@ left: 10px;
   
 }
 
-/* .project2 img{
-    align-items: center;
-    margin: auto;
-    max-width: 100%;
-} */
 
 .project3{
     min-height: 100vh;
@@ -680,7 +680,7 @@ font-size: 45px
  }
 
  .contactcontainer{
-    height: 100%;
+    min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;

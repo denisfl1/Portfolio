@@ -143,7 +143,7 @@ gotoproject.forEach(element =>{
     })
 
 
-const carousels = document.querySelectorAll('.carousel');
+const carousels = document.querySelectorAll('.carousel')
 const EventListCarousel = document.querySelectorAll('.carousel.EventList')
 const E_CommerceBooks = document.querySelectorAll('.carousel.E-CommerceBooks')
 const Medical_Scheduling_System = document.querySelectorAll('.carousel.Medical_Scheduling_System')
