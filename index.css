@@ -569,7 +569,7 @@ font-size: 45px
   
   .slide img{
     width: 100%;
-    max-height: 400px;
+    /* max-height: 400px; */
     border-radius: 5px;
  
   } 
