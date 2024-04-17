@@ -930,7 +930,8 @@ font-size: 45px
         .engineering{ 
             display: flex;
             flex-wrap: wrap;
-            width: 168px;
+            flex-direction: column;
+            /* width: 168px; */
         }
     
 
@@ -1250,7 +1251,8 @@ font-size: 45px
     .engineering{ 
         display: flex;
         flex-wrap: wrap;
-        width: 168px;
+        flex-direction: column;
+        /* width: 168px; */
     }
 
     header{
