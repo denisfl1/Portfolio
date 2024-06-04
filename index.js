@@ -147,6 +147,7 @@ const carousels = document.querySelectorAll('.carousel')
 const EventListCarousel = document.querySelectorAll('.carousel.EventList')
 const E_CommerceBooks = document.querySelectorAll('.carousel.E-CommerceBooks')
 const Medical_Scheduling_System = document.querySelectorAll('.carousel.Medical_Scheduling_System')
+const School_Grades_System = document.querySelectorAll('.carousel.School_Grades_System')
 const prevBtns = document.querySelectorAll('.prevBtn');
 const nextBtns = document.querySelectorAll('.nextBtn');
 const prevBtnsBlack = document.querySelectorAll('.prevBtn.Black');
@@ -269,6 +270,8 @@ Medical_Scheduling_System.forEach((carousel)=>{
 
 
 })
+
+
 
 let expand = false
 const SlideDiv = document.querySelectorAll('.slide')

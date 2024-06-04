@@ -434,6 +434,12 @@ footer span{
     width: 110px;
 }
 
+
+#tailwindcss{
+    height: 60px;
+    width: 110px;    
+    }
+
 .projectimg{
     position: relative;
     height: 100%;
@@ -810,9 +816,6 @@ font-size: 45px
     padding-right: 10px;
  }
 
-
-
-
  
  @media screen and (min-width: 320px)and (max-width: 1030px){
 
@@ -1167,6 +1170,11 @@ font-size: 45px
     width: 80px;
     }
 
+    #tailwindcss{
+    height: 40px;
+    width: 80px;    
+    }
+
  
 
     .divdasimgs p{
@@ -1366,8 +1374,5 @@ font-size: 45px
         transform: rotate(180deg);
     }
 
-   
-    
- 
-
 }
+
