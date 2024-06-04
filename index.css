@@ -437,7 +437,8 @@ footer span{
 
 #tailwindcss{
     height: 60px;
-    width: 110px;    
+    width: 110px;
+    display: flex; 
     }
 
 .projectimg{
@@ -1172,7 +1173,8 @@ font-size: 45px
 
     #tailwindcss{
     height: 40px;
-    width: 80px;    
+    width: 80px;
+    display: flex;
     }
 
  
