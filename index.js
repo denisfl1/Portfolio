@@ -153,7 +153,7 @@ const nextBtns = document.querySelectorAll('.nextBtn');
 const prevBtnsBlack = document.querySelectorAll('.prevBtn.Black');
 const nextBtnsBlack = document.querySelectorAll('.nextBtn.Black');
 const pages = document.querySelectorAll('.page');
-const page5  = document.getElementsByClassName('project3')[0]
+const page5  = document.getElementsByClassName('LOADING')[0]
 let loadingCount = 0
 
 

@@ -485,7 +485,7 @@ footer span{
     
 }
 
-.project2{
+.project2,.project3,.project4,.LOADING{
     min-height: 100vh;
     position: relative;
     min-width: 100%;
@@ -499,29 +499,12 @@ footer span{
 }
 
 
-.project3{
-    min-height: 100vh;
-    position: relative;
-    min-width: 100%;
-    background-color: rgb(203, 206, 206);
-    text-align: center;
-    align-items: center;
-    display: flex;
-    /* margin-bottom: 0px; */
-    background-color: #fff;
-}
-
-
-.project3 img{
+.LOADING img{
     align-items: center;
     margin: auto;
     max-width: 100%;
 }
 
-
-.project3 h1{
-font-size: 45px
-}
 
 @keyframes aparecer-voltar {
     0% { opacity: 0; }
@@ -530,7 +513,8 @@ font-size: 45px
   }
   
 
-  .project3 h1{
+  .LOADING h1{
+    font-size: 45px;
     animation: aparecer-voltar 2s ease-in-out infinite; 
   } 
 
