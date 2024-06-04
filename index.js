@@ -271,7 +271,14 @@ Medical_Scheduling_System.forEach((carousel)=>{
 
 })
 
-
+School_Grades_System.forEach((carousel)=>{
+    let string = ""
+    for(i=1;i<18;i++){
+        string +=  `<div class="slide"><img src="./projectsimgs/School_Grades_System/${i}.png" alt= Slide ${i}></div>`
+    }
+    carousel.innerHTML = string
+    
+})
 
 let expand = false
 const SlideDiv = document.querySelectorAll('.slide')
