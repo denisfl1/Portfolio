@@ -401,6 +401,7 @@ footer span{
     }
 .techused{
     display: flex;
+    align-items: end;
 }
 .skills1{
     width: 100%;
@@ -412,6 +413,10 @@ footer span{
 .skillsimgs1{
     width: 54px;
     border-radius: 5px;
+}
+
+#mysql{
+height: 60px;
 }
 
 #reactjs{
@@ -438,7 +443,6 @@ footer span{
 #tailwindcss{
     height: 60px;
     width: 110px;
-    display: flex; 
     }
 
 .projectimg{
@@ -1113,7 +1117,7 @@ footer span{
     }
 
     .containerdescription h1{
-        font-size: 23px;
+        font-size: 28px;
       
       }
 
@@ -1134,6 +1138,7 @@ footer span{
     
       } 
 
+      
     #reactjs{
         width: 40px;
     }
@@ -1155,13 +1160,16 @@ footer span{
     width: 80px;
     }
 
+    #mysql{
+    height: 40px;
+    }
+
     #tailwindcss{
     height: 40px;
     width: 80px;
-    display: flex;
     }
 
- 
+    
 
     .divdasimgs p{
         font-size: 15px;
@@ -1177,7 +1185,7 @@ footer span{
      }
 
 
-    .project3.page h1{
+    .LOADING h1{
         font-size: 35px;
      }
 
