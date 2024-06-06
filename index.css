@@ -620,7 +620,8 @@ height: 60px;
   .containerdescription{
     display: flex;
     align-items: center;
-    max-width:110% ;
+    max-width:110%;
+    position: relative;
 }
 
 .containerdescription img{
@@ -979,9 +980,12 @@ height: 60px;
 
     .containerdescription img{
     display: flex;
-    width: 25px;
-    height: 25px;
-    margin-left: 15px;
+    width: 48px;
+    height: 48px;
+    /* margin-left: 15px; */
+    position: absolute;
+    top: -19px;
+    right: -18px;
 }
 
 
