@@ -153,7 +153,7 @@ const nextBtns = document.querySelectorAll('.nextBtn');
 const prevBtnsBlack = document.querySelectorAll('.prevBtn.Black');
 const nextBtnsBlack = document.querySelectorAll('.nextBtn.Black');
 const pages = document.querySelectorAll('.page');
-const page5  = document.getElementsByClassName('LOADING')[0]
+const LOADING  = document.getElementsByClassName('LOADING')[0]
 let loadingCount = 0
 
 
@@ -177,16 +177,16 @@ page.addEventListener('wheel', (event) => {
 })
 
 
-page5.addEventListener('mouseover',()=>{
+LOADING.addEventListener('mouseover',()=>{
 
     const loading = setInterval(()=>{
         loadingCount +=1
         
         if(loadingCount == 5){
             clearInterval(loading)
-            page5.children[0].style.opacity = 0
-            page5.children[0].style.display = 'none'   
-            page5.children[1].style.display = 'block'
+            LOADING.children[0].style.opacity = 0
+            LOADING.children[0].style.display = 'none'   
+            LOADING.children[1].style.display = 'block'
         
         }
             
@@ -197,16 +197,16 @@ page5.addEventListener('mouseover',()=>{
 })
 
 
-page5.addEventListener('touchstart',()=>{
+LOADING.addEventListener('touchstart',()=>{
 
     const loading = setInterval(()=>{
         loadingCount +=1  
         
         if(loadingCount == 5){
             clearInterval(loading)
-            page5.children[0].style.opacity = 0
-            page5.children[0].style.display = 'none'   
-            page5.children[1].style.display = 'block'
+            LOADING.children[0].style.opacity = 0
+            LOADING.children[0].style.display = 'none'   
+            LOADING.children[1].style.display = 'block'
         
         }
             
