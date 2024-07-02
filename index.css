@@ -174,10 +174,11 @@ z-index: 1;
     transform: translateY(-50%); 
     animation: slideIn 2s forwards;
     z-index: 1;
+    width: 100%;
 }
 
 .perfilcontainer{
-    width: 350px;
+    width: 400px;
     position: absolute;
     left:55%;
 }
