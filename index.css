@@ -254,7 +254,16 @@ z-index: -1;
     font-size: 45px;
     display: inline;
     
-} 
+}
+
+#bio >h2{
+margin-bottom: 3px;
+
+}
+
+.actualySkills{
+    margin-top: 0;
+}
 
 .paragrafo{
     margin-left: 45px;
