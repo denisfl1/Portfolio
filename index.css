@@ -243,10 +243,12 @@ z-index: -1;
 #bio{
     margin-top: 5rem;
     width: 700px;   
-    position: absolute;
+    /* position: absolute; */
     right:0 ;
     z-index: 2;
-    margin-right: 200px;
+    /* margin-right: 200px; */
+    margin: auto;
+    margin-left: 600px;
     text-align: justify;
 }
 
@@ -411,14 +413,13 @@ footer span{
     }
 .techused{
     display: flex;
-    align-items: end;
-}
-.skills1{
-    width: 100%;
-    margin-top: 10px;
-    display: flex;
+    align-items:center;
     flex-wrap: wrap;
+    margin-top: 10px;
+
+ 
 }
+
 
 .skillsimgs1{
     width: 54px;
@@ -487,7 +488,7 @@ height: 60px;
 
 .project1techs{
     text-align: center;
-    margin-right: 10px;  
+    margin-right: 10px; 
 }
 .project1techs p{
     margin-top: 0;
@@ -496,7 +497,6 @@ height: 60px;
 .project1git1{
     width: 64px;
     max-height: 64px;
-    
 }
 
 .project2,.project3,.project4,.LOADING{
@@ -607,24 +607,26 @@ height: 60px;
 
 .expand{
     position: absolute;
-    top: 84%;
+    /* top: 84%; */
     /* transform: translateY(-90%); */
     cursor: pointer;
-    width: 28px;
+    width: 30px;
     right: 20px;
     display: visible;
     opacity: 0;
     transition: 0.2s ease-in-out;
+    bottom: 45px;
 }
 
 .shrink{
     display: none;
     position: absolute;
-    top: 100%;
+    /* top: 100%; */
+    bottom: 0;
     transform: translateY(-100%);
     cursor: pointer;
     width: 52px;
-    right: 10px;
+    right: 20px;
 }
 
   .containerdescription{
