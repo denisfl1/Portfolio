@@ -51,13 +51,13 @@ header h2{
 
 .menu li{
     margin-left: 1.5rem;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 .menu li:hover{
-   border-bottom: 2px solid #161616;
+   border-bottom: 3px solid #161616;
    cursor: pointer;
 }
 
