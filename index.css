@@ -17,6 +17,13 @@ header{
 
 }
 
+.hearth{
+    content: url('/images/coracao.png');
+    display: inline-block;
+    width: 16px; 
+    height: 16px;
+    margin-bottom: -2px;
+}
 
 .border{
     box-shadow:  0px 0px 10px 0px #d2d2d278;
