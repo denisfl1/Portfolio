@@ -18,13 +18,12 @@ header{
 }
 
 .hearth_container{
-    width: 16px; 
-    height: 16px;
     display: inline-block;
 }
 
 #hearth{
-    width: 100%;
+    width: 16px; 
+    height: 16px;
     margin-bottom: -2px;
 }
 
