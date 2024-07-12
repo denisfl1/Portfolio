@@ -17,7 +17,7 @@ header{
 
 }
 
-.hearth{
+#hearth{
     content: url('/images/coracao.png');
     display: inline-block;
     width: 16px; 
