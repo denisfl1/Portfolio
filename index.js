@@ -69,8 +69,9 @@ const respemenu = document.querySelector('.respmenuopen')
 const menucheck = document.getElementById('respmenu-hamburger')
 const linkdinicon = document.querySelectorAll('.contactlinkdin')
 const githubcontact = document.querySelectorAll('.contactgithub')
+const coração = document.getElementById('hearth')
 
-
+coração.innerHTML = `<img src=/icons/hearth.png>`
 
 function openrespmenu(){
    
