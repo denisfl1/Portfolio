@@ -9,11 +9,9 @@ body{
 header{
     display: flex;
     justify-content: space-around;
-    background-color: #d5d5d500;
     align-items: center;
     height: 4rem;
     position: relative;
-    color: rgb(0, 0, 0);
 
 }
 
