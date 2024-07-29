@@ -425,12 +425,6 @@ containerform.children[0].children[8].addEventListener('click',(e)=>{
 
 })
 
-
-const currentPath = window.location.pathname.toLowerCase();
-if (currentPath.includes('/portfolio')) {
-    window.location.pathname = currentPath.replace('/portfolio', '/Portfolio');
-}
-
 window.addEventListener('resize', Btns_SlideResp_src_Window_Width)
 
 Btns_SlideResp_src_Window_Width()
