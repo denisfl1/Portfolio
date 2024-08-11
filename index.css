@@ -469,6 +469,11 @@ height: 60px;
     width: 110px;
     }
 
+#styled_components{
+    height: 60px;
+    width: 110px;
+}
+
 .projectimg{
     position: relative;
     height: 100%;
@@ -1196,7 +1201,10 @@ height: 60px;
     width: 80px;
     }
 
-    
+    #styled_components{
+        height: 40px;
+        width: 80px;
+    }
 
     .divdasimgs p{
         font-size: 15px;
