@@ -130,7 +130,7 @@ z-index: 1;
     position: absolute;
     left: 20%;
     font-size: medium;
-    text-align:left
+    text-align:left;
 }
 
 .apresentation h2::after{

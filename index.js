@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     
             elements.innerHTML += next                 
     
-        },55)
+        },50)
     
     
      } 
