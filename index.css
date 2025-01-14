@@ -6,6 +6,17 @@ body{
     height: 100vh;
 }
 
+::-webkit-scrollbar{
+    background-color: #ffffff;
+    width: 6px;
+  }
+  
+::-webkit-scrollbar-thumb{
+    background-color: #000000;
+
+  }
+  
+
 header{
     display: flex;
     justify-content: space-around;
@@ -1403,4 +1414,5 @@ height: 60px;
     }
 
 }
+
 
