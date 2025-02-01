@@ -228,6 +228,8 @@ prevBtns[index].addEventListener('click', () => {
     updateCarousel();
 });
 
+
+
 nextBtns[index].addEventListener('click', () => {
     currentIndex = Math.min(currentIndex + 1, carousel.children.length - 1)
     updateCarousel()
