@@ -1,5 +1,8 @@
+import { PROJECTS } from "./projects.js";
+
 document.addEventListener('DOMContentLoaded',()=>{
 
+  
     const elements = document.querySelector("#typing-animation")
     const words = "Olá, Seja muito Bem vindo(a) ao meu portfólio, meu nome é Denis Ferreira, e essa página é um Overview da minha tragetória como Software Enginner."
     const downButton = document.getElementById('downimg')
@@ -70,16 +73,20 @@ const menucheck = document.getElementById('respmenu-hamburger')
 const linkdinicon = document.querySelectorAll('.contactlinkdin')
 const githubcontact = document.querySelectorAll('.contactgithub')
 
+
 function openrespmenu(){
    
-if(menucheck.checked){
-    respemenu.style.height = '200px'          
-        
-}else{
-    respemenu.style.height = '0px'
-}
+if(menucheck.checked)
+    return respemenu.style.height = '200px'          
+        return  respemenu.style.height = '0px'
+
   
 }
+
+
+menucheck.addEventListener('click',()=>{
+   openrespmenu()
+})
 
 
 linkdinicon.forEach(element=>{
@@ -151,9 +158,39 @@ const nextBtns = document.querySelectorAll('.nextBtn');
 const prevBtnsBlack = document.querySelectorAll('.prevBtn.Black');
 const nextBtnsBlack = document.querySelectorAll('.nextBtn.Black');
 const pages = document.querySelectorAll('.page');
-const LOADING  = document.getElementsByClassName('LOADING')[0]
-let loadingCount = 0
+const LOADING  = document.getElementsByClassName('LOADING')[0];
+const Description = document.querySelectorAll('.projectdescription');
+let loadingCount = 0;
 
+
+
+Description.forEach((e,index)=>{
+
+
+e.children[0].children[0].innerHTML = PROJECTS[index].title
+
+const text = PROJECTS[index].description
+
+const hasH3 = /<h3[\s>]/i.test(text)
+
+
+  const h3 = document.createElement("h3")
+  const div = document.createElement("div")
+
+
+
+    if(hasH3){
+         div.innerHTML = PROJECTS[index].description
+          e.insertBefore(div, e.children[2])
+    }else{
+        
+  h3.innerHTML = PROJECTS[index].description
+    e.insertBefore(h3, e.children[2])
+    }
+
+
+
+})
 
 pages.forEach((page, index) => {
 
@@ -173,6 +210,8 @@ page.addEventListener('wheel', (event) => {
 
 
 })
+
+
 
 
 LOADING.addEventListener('mouseover',()=>{
@@ -242,7 +281,7 @@ nextBtns[index].addEventListener('click', () => {
 EventListCarousel.forEach((carousel)=>{
 
     let string = "";
-    for(i=1;i<21;i++){
+    for(let i=1;i<21;i++){
         
         string += `<div class="slide"><img src="./projectsimgs/EventList/Captura de Tela (${i}).png" alt= Slide ${i}></div>`
     }
@@ -254,7 +293,7 @@ EventListCarousel.forEach((carousel)=>{
 E_CommerceBooks.forEach((carousel)=>{
     
     let string = "";
-    for(i=1;i<24;i++){
+    for(let i=1;i<24;i++){
         string +=  `<div class="slide"><img src="./projectsimgs/EcommerceBooks/Captura de Tela (${i}).png" alt= Slide ${i}></div>`
     }
     carousel.innerHTML = string
@@ -263,7 +302,7 @@ E_CommerceBooks.forEach((carousel)=>{
 Medical_Scheduling_System.forEach((carousel)=>{
 
     let string = "";
-    for(i=1;i<40;i++){
+    for(let i=1;i<40;i++){
         string +=  `<div class="slide"><img src="./projectsimgs/Medical__scheduling_system/Captura de Tela (${i}).png" alt= Slide ${i}></div>`
     }
     carousel.innerHTML = string
@@ -273,7 +312,7 @@ Medical_Scheduling_System.forEach((carousel)=>{
 
 School_Grades_System.forEach((carousel)=>{
     let string = ""
-    for(i=1;i<18;i++){
+    for(let i=1;i<18;i++){
         string +=  `<div class="slide"><img src="./projectsimgs/School_Grades_System/${i}.png" alt= Slide ${i}></div>`
     }
     carousel.innerHTML = string
@@ -337,7 +376,7 @@ CloseSlide.forEach((element,index)=>{
 ExpandSlideIcon.forEach((element,index)=>{
 
     element.addEventListener('click',()=>{
-     
+         
         if(!expand){
             expand = true
                   
@@ -358,7 +397,7 @@ CarouselsResMobile.forEach((e)=>{
     const LengthOfSlide = e.children[0].children.length
     const SlideElement = e.children[0].children
 
-    for(i=0;i<LengthOfSlide;i++){
+    for(let i=0;i<LengthOfSlide;i++){
 
        SlideElement[i].className = "slide1"
     }
@@ -371,7 +410,7 @@ CarouselsResMobile.forEach((e)=>{
 OpenSlideResp.forEach((element,index)=>{
 
     element.addEventListener('click',()=>{
-                    
+           
       if(!expand){
       expand = true
         SlideResp[index].style.display = expand && 'flex'                       
