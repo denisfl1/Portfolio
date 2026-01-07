@@ -17,7 +17,7 @@
     {title:"E-Commerce Books",
     description:`
     
-                <span class="paragrafo">Com o design base inspirado no site oficial da Saraiva, esse é um E-Commerce de livros consumindo a API do Google Books,</span>
+                <span class="paragrafo">Com o design base inspirado no site oficial da extinta Saraiva, foi recriado neste projeto um E-Commerce de livros consumindo a API do Google Books,</span>
                 foram trabalhadas as partes mais importantes de um E-commerce, desde a seleção dos produtos, 
                 favoritos, carrinho de compras, forma de pagamento e finalização da compra, 
                 além de ter as principais funcionalidades que o usuário precisa para o controle de sua conta.
