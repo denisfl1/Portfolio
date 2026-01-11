@@ -160,6 +160,7 @@ const nextBtnsBlack = document.querySelectorAll('.nextBtn.Black');
 const pages = document.querySelectorAll('.page');
 const LOADING  = document.getElementsByClassName('LOADING')[0];
 const Description = document.querySelectorAll('.projectdescription');
+let expand = false
 let loadingCount = 0;
 
 
@@ -184,7 +185,7 @@ const hasH3 = /<h3[\s>]/i.test(text)
           e.insertBefore(div, e.children[2])
     }else{
         
-  h3.innerHTML = PROJECTS[index].description
+    h3.innerHTML = PROJECTS[index].description
     e.insertBefore(h3, e.children[2])
     }
 
@@ -258,6 +259,8 @@ LOADING.addEventListener('touchstart',()=>{
 carousels.forEach((carousel, index) => {
 let currentIndex = 0
 
+
+
 function updateCarousel() {
     carousel.style.transform = `translateX(-${currentIndex * 100}%)`
 }
@@ -265,6 +268,8 @@ function updateCarousel() {
 prevBtns[index].addEventListener('click', () => {
     currentIndex = Math.max(currentIndex - 1, 0)
     updateCarousel();
+
+  
 });
 
 
@@ -272,6 +277,7 @@ prevBtns[index].addEventListener('click', () => {
 nextBtns[index].addEventListener('click', () => {
     currentIndex = Math.min(currentIndex + 1, carousel.children.length - 1)
     updateCarousel()
+
 })
 
 
@@ -319,8 +325,9 @@ School_Grades_System.forEach((carousel)=>{
     
 })
 
-let expand = false
-const SlideDiv = document.querySelectorAll('.slide')
+
+const Slide_Div = document.querySelectorAll('.slide')
+const Slide_website_container = document.querySelectorAll('.slide_website_container')
 const SlideResp = document.querySelectorAll('.queries')
 const OpenSlideResp = document.querySelectorAll('.openResponsive')
 const CloseSlide = document.querySelectorAll('.shrink')
@@ -349,25 +356,100 @@ CarouselsRes.forEach((element,index)=>{
 })
 
 
-SlideResp.forEach((element,index)=>{
-     
-    element.addEventListener('click',(e)=>{
 
+
+ Slide_website_container.forEach((element,index)=>{
+
+     const div_slide =  `<div class="slide_link" ></div>`
+     const div_website = `<div class= "website_link"></div>`
+     const img_slide  = `<img src="./icons/slide.png"></img>`
+     const img_website = `<img src="./icons//internet.png">`
+     const h1_slide = `<h1>SLIDE</h1>`
+     const h1_website = `<h1>WEBSITE (DESKTOP)</h1>`
+
+
+    element.innerHTML = div_slide + div_website
+    element.children[0].innerHTML = img_slide + h1_slide 
+    element.children[1].innerHTML = img_website  + h1_website   
+   
+
+    element.children[0].addEventListener('click',()=>{
+       
+        
+        Slide_website_container[index].style.display = 'none'
+        CarouselsResMobile[index].style.display = 'flex'
+    
+
+    })
+
+
+
+
+ })
+
+
+ const Website_link = document.querySelectorAll('.website_link')
+ const Slide_link = document.querySelectorAll('.slide_link')
+ const links = [ ]
+
+const EcommerceBooks_Link = 'https://ecommercebooks.vercel.app/'
+
+links.length = 5
+
+links.splice(1,0,EcommerceBooks_Link) 
+
+Website_link.forEach((element,index)=>{
+
+
+element.addEventListener('click',()=>{
+
+
+    if(links[index] == undefined){
+
+         alert("O Site ainda não foi disponibilizado!")
+  
+    }else{
+         window.location.href = links[index]
+    }
+
+
+
+})
+
+
+})
+
+
+
+SlideResp.forEach((element,index)=>{
+
+   
+
+    element.addEventListener('click',(e)=>{
+        
         if(e.target.className == 'queries'){
             expand = false
             element.style.display = 'none'
-
+            Slide_website_container[index].style.display = 'flex'
+            CarouselsResMobile[index].style.display = 'none'
         }
 
     })
 })
 
 
+
+
 CloseSlide.forEach((element,index)=>{
+
+
   
    element.addEventListener('click',()=>{
    expand = false
    SlideResp[index].style.display = 'none'
+   Slide_website_container[index].style.display = 'flex'
+   CarouselsResMobile[index].style.display = 'none'
+
 
     })
  
@@ -381,9 +463,10 @@ ExpandSlideIcon.forEach((element,index)=>{
             expand = true
                   
             SlideResp[index].style.display = 'flex'
-         
-           }else{
-            SlideResp[index].style.display = 'none'
+            Slide_website_container[index].style.display = 'none'
+            CarouselsResMobile[index].style.display = 'flex'
+
+    
            }
          
     })
@@ -410,6 +493,7 @@ CarouselsResMobile.forEach((e)=>{
 OpenSlideResp.forEach((element,index)=>{
 
     element.addEventListener('click',()=>{
+      
            
       if(!expand){
       expand = true
@@ -421,6 +505,8 @@ OpenSlideResp.forEach((element,index)=>{
      
 
 })
+
+
 
 function Btns_SlideResp_src_Window_Width() {
  
