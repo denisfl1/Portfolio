@@ -162,6 +162,7 @@ const LOADING  = document.getElementsByClassName('LOADING')[0];
 const Description = document.querySelectorAll('.projectdescription');
 let expand = false
 let loadingCount = 0;
+let currentIndex = 0
 
 
 
@@ -198,6 +199,7 @@ pages.forEach((page, index) => {
 page.addEventListener('wheel', (event) => {
     event.preventDefault()
     const delta = event.deltaY
+    currentIndex = 0
 
     if (delta > 0 && index < pages.length - 1) {
     pages[index +1].scrollIntoView({ behavior: 'smooth' });
@@ -256,20 +258,24 @@ LOADING.addEventListener('touchstart',()=>{
 
 
 
-carousels.forEach((carousel, index) => {
-let currentIndex = 0
 
+carousels.forEach((carousel, index) => {
 
 
 function updateCarousel() {
     carousel.style.transform = `translateX(-${currentIndex * 100}%)`
+       if(expand)return carousels[index - 1].style.transform = `translateX(-${currentIndex * 100}%)`
+    else if(!expand )return carousels[index + 1].style.transform = `translateX(-${currentIndex * 100}%)`
+  
 }
 
 prevBtns[index].addEventListener('click', () => {
     currentIndex = Math.max(currentIndex - 1, 0)
     updateCarousel();
+  
 
   
+
 });
 
 
@@ -278,11 +284,13 @@ nextBtns[index].addEventListener('click', () => {
     currentIndex = Math.min(currentIndex + 1, carousel.children.length - 1)
     updateCarousel()
 
-})
-
-
 
 })
+
+
+
+})
+
 
 EventListCarousel.forEach((carousel)=>{
 
