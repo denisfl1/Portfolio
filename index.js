@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   
     const elements = document.querySelector("#typing-animation")
-    const words = "Olá, Seja muito Bem vindo(a) ao meu portfólio, meu nome é Denis Ferreira, e essa página é um Overview da minha tragetória como Software Enginner."
+    const words = "Olá, Seja muito Bem vindo(a) ao meu portfólio, meu nome é Denis Ferreira, e essa página é um Overview da minha tragetória como Software Engineer."
     const downButton = document.getElementById('downimg')
     const upButton = document.getElementById('upimg')
     const homepage = document.getElementById('homepage')
